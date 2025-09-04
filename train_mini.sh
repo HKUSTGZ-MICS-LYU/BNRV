@@ -1,0 +1,24 @@
+python train_bit.py \
+    --out_dir="outmini_bit" \
+    --batch_size=128 \
+    --max_seq_len=512 \
+    --gradient_accumulation_steps=1 \
+    --vocab_source="custom" \
+    --vocab_size=512 \
+    --init_from="scratch" \
+    --dim=64 \
+    --n_layers=5 \
+    --n_heads=8 \
+    --n_kv_heads=4 \
+    --multiple_of=4 \
+    --hidden_dim=256 \
+    --learning_rate=1.5e-3 \
+    --decay_lr=True \
+    --dropout=0.05 \
+    --weight_decay=0.1 \
+    --max_iters=500000 \
+    --beta2=0.99 \
+    --warmup_iters=1000 \
+    --eval_interval=10000 \
+    --eval_iters=100 \
+    --compile=True
