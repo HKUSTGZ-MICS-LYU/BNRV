@@ -27,3 +27,5 @@ https://github.com/kyegomez/BitNet
 https://github.com/cpldcpu/BitNetMCU
 
 https://github.com/microsoft/BitNet
+
+https://github.com/pulp-platform/RVfplib
