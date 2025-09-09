@@ -1,0 +1,3 @@
+[submodule "hw/VexiiRiscv-MiCo"]
+	path = hw/VexiiRiscv-MiCo
+	url = git@github.com:HKUSTGZ-MICS-LYU/VexiiRiscv-MiCo.git

@@ -4,7 +4,7 @@ DEBUG?=no
 BENCH=yes
 
 USE_SIMD?=0
-BITNET_QUANT?=3
+BITNET_QUANT?=3 # 2 - Binary, 3 - Ternary, 4 - Quaternary
 
 CFLAGS += -fno-common -fno-inline
 CFLAGS += -Wno-implicit-int -Wno-implicit-function-declaration
