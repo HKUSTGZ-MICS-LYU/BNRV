@@ -100,7 +100,7 @@ https://github.com/pulp-platform/RVfplib
 
 ## Cite Us
 
-[Paper Link](./blob/main/BNRV_ICCD25.pdf)
+[Paper Link](./BNRV_ICCD25.pdf)
 
 ```bibtex
 @inproceedings{bnrv_iccd2025,
