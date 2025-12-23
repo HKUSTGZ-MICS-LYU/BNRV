@@ -2,7 +2,7 @@
 
 ## Notice
 
-This project is developed when the first version of BitNet just came out, and the `runbit.c` is only a naive implementation that just works (forked from [llama2.c](https://github.com/karpathy/llama2.c)). There have been significantly better C/C++ kernels for serious [BitNet inference](https://github.com/microsoft/BitNet). This project aims on the baremetal implementation to be run on RISC-V cores and their RTL simulators.
+This project was developed when the first version of BitNet just came out, and the `runbit.c` is only a naive implementation that just works (forked from [llama2.c](https://github.com/karpathy/llama2.c)). There have been significantly better C/C++ kernels for serious [BitNet inference](https://github.com/microsoft/BitNet). This project aims at the bare-metal implementation to be run on RISC-V cores and their RTL simulators.
 
 ## Run BitNet on your CPU
 
@@ -80,7 +80,7 @@ BitNet MatMul Speedup: 62084022 / 10704528 = **5.80x**
 
 Under ASAP 7nm PDK, the VexiiRiscv (w./w.o. BNRV) can run @ 500 MHz, so the token generation speed is accelerated from 6.3 tokens/s to 17.8 tokens/s.
 
-In general, using better baseline setup (add caches, add branch predictors, dual-issue) will amplify the e2e speedup. The root cause of slow BitNet MatMul on baseline CPU is the heavy bit extraction/unpacking operations, while BNRV bypasses them with hardware support.
+In general, using a better baseline setup (add caches, add branch predictors, dual-issue) will amplify the e2e speedup. The root cause of slow BitNet MatMul on baseline CPU is the heavy bit extraction/unpacking operations, while BNRV bypasses them with hardware support.
 
 ## Training BitNet on TinyStories
 
@@ -98,8 +98,10 @@ https://github.com/microsoft/BitNet
 
 https://github.com/pulp-platform/RVfplib
 
+## Cite Us
 
-## Cite Us (To Be Presented)
+[Paper Link](./blob/main/BNRV_ICCD25.pdf)
+
 ```bibtex
 @inproceedings{bnrv_iccd2025,
   title     = {BNRV: A Lightweight SIMD Extension for Efficient BitNet Inference on RISC-V CPUs},
