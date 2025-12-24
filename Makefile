@@ -43,13 +43,15 @@ endif
 
 GENARGS := $(VEXIIARGS) $(VEXIIARCH) $(BNRVARGS)
 
+RISCV_PATH ?= /opt/riscv
+
 gen-hw:
 	cd hw/VexiiRiscv-MiCo && sbt "runMain vexiiriscv.GenerateBnrv $(GENARGS)"
 
 compile-bnrv: $(BNRV_ELF)
 
 $(BNRV_ELF):
-	make -C riscv compile USE_SIMD=$(BNRV) MARCH=$(MARCH)
+	make -C riscv all USE_SIMD=$(BNRV) MARCH=$(MARCH) RISCV_PATH=$(RISCV_PATH) 
 
 sim-hw: $(BNRV_ELF)
 	cd hw/VexiiRiscv-MiCo && sbt "runMain vexiiriscv.SimulateBnrv $(GENARGS) --load-elf $(shell realpath $(BNRV_ELF)) --print-stats"

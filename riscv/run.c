@@ -880,7 +880,7 @@ int main(){
     unsigned long long rng_seed = 0; // seed rng with time by default
 
     // parameter validation/overrides
-    if (rng_seed <= 0) rng_seed = (unsigned int)time(NULL);
+    // if (rng_seed <= 0) rng_seed = (unsigned int)time(NULL);
     if (temperature < 0.0) temperature = 0.0;
     if (topp < 0.0 || 1.0 < topp) topp = 0.9;
     if (steps < 0) steps = 0;

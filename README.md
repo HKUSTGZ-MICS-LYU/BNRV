@@ -29,6 +29,10 @@ Finally, if you want to simulate BitNet inference on RTL simulator of Vexii and 
 make sim-hw MARCH=< rv32i[m][f][c] > VEXIIARGS="<vexii args>" BNRV=< 0,4,8,16,32 >
 ```
 This step requires: 1. RISC-V GNU toolchain (as risc-v compiler), 2. Verilator (as RTL simulator). Just install them according to the [VexiiRiscv](https://github.com/SpinalHDL/VexiiRiscv) documents and tutorials.
+
+> [!NOTE] 
+> In different RISC-V GNU version, the `MARCH` flags have different naming standard. In newer versions.
+
 Notice that you always need to `make clean` before simulating with another `MARCH` or `BNRV`. The simulation usually takes 5~30 minutes (tested on my Intel i7-12700). It's recommended to use `MARCH=rv32imfc` for fastest simulation.
 
 If you don't want to setup RISC-V GNU, we have prepared a few prebuilt ELFs in `riscv/prebuilt`. Set `USE_PREBUILT=1` to use them in simulation.
