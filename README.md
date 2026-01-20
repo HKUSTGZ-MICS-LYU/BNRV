@@ -1,5 +1,11 @@
 # BNRV: Lightweight BitNet Acceleration on RISC-V via Custom Insturctions
 
+## Documentation
+
+📖 **[Computation Flow Documentation](docs/COMPUTATION_FLOW.md)** - Comprehensive guide to the BNRV computation pipeline, including BitNet quantization, custom instructions, and implementation details.
+
+📋 **[Custom Instructions Quick Reference](docs/CUSTOM_INSTRUCTIONS.md)** - Quick reference guide for BNRV custom RISC-V instructions (BNSTORE, BNSUM, DOTP8, DOTP8X2).
+
 ## Notice
 
 This project was developed when the first version of BitNet just came out, and the `runbit.c` is only a naive implementation that just works (forked from [llama2.c](https://github.com/karpathy/llama2.c)). There have been significantly better C/C++ kernels for serious [BitNet inference](https://github.com/microsoft/BitNet). This project aims at the bare-metal implementation to be run on RISC-V cores and their RTL simulators.
