@@ -12,7 +12,7 @@ CFLAGS += -DTIME -DCORE_HZ=12000000ll
 CFLAGS += -DUSE_SIMD=$(USE_SIMD) -DBITNET_QUANT=$(BITNET_QUANT)
 CFLAGS += -I./
 
-SRCS = 	$(wildcard *.c) \
+SRCS = 	$(filter-out test_bnrv_simple.c, $(wildcard *.c)) \
 		$(wildcard *.S) 
 
 BIN_OBJS = bin/model.o bin/tokenizer.o
