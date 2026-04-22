@@ -31,7 +31,7 @@ make sim-hw MARCH=< rv32i[m][f][c] > VEXIIARGS="<vexii args>" BNRV=< 0,4,8,16,32
 This step requires: 1. RISC-V GNU toolchain (as risc-v compiler), 2. Verilator (as RTL simulator). Just install them according to the [VexiiRiscv](https://github.com/SpinalHDL/VexiiRiscv) documents and tutorials.
 
 > [!NOTE] 
-> In different RISC-V GNU version, the `MARCH` flags have different naming standard. In newer versions.
+> In different RISC-V GNU versions, the `MARCH` flags have different naming standards. In newer versions, please check the march support with `--print-multi-lib` on gcc. 
 
 Notice that you always need to `make clean` before simulating with another `MARCH` or `BNRV`. The simulation usually takes 5~30 minutes (tested on my Intel i7-12700). It's recommended to use `MARCH=rv32imfc` for fastest simulation.
 
